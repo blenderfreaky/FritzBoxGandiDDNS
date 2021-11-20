@@ -18,15 +18,15 @@ sha512sums=('45a1acec0cb3c24c8c4e311b39b2493719bc1bd73fd1bde5a42ae82d5f8f205e075
             '54f41c2a7b135b404380f97af967c413aa9c6db6e6f5a97fa5a4a3df0d056b2426139ebbbac71c095f66dba1ddae1b1980b722d57f912c7d2b936891d5fc3730')
 
 build() {
-  cd "$srcdir/$pkgname-$pkgver/FritzBoxGandiDDNS"
+  cd "$srcdir/FritzBoxGandiDDNS-$pkgver/FritzBoxGandiDDNS"
 
   dotnet publish --use-current-runtime -c Release -o fritzbox-gandi-ddns
 }
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver/FritzBoxGandiDDNS"
+  cd "$srcdir/FritzBoxGandiDDNS-$pkgver/FritzBoxGandiDDNS"
 
-  install -Dm755 fritzbox-gandi-ddns/fritzbox-gandi-ddns "$pkgdir/usr/bin/fritzbox-gandi-ddns/fritzbox-gandi-ddns"
+  install -Dm755 fritzbox-gandi-ddns/FritzBoxGandiDDNS "$pkgdir/usr/bin/fritzbox-gandi-ddns/fritzbox-gandi-ddns"
   install -Dm644 fritzbox-gandi-ddns/appsettings.json "$pkgdir/usr/bin/fritzbox-gandi-ddns/appsettings.json"
   
   install -Dm644 "$srcdir/fritzbox-gandi-ddns.service" "$pkgdir"/usr/lib/systemd/system/fritzbox-gandi-ddns.service
