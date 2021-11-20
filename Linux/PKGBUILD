@@ -1,5 +1,5 @@
 pkgname=fritzbox-gandi-ddns
-pkgver=0.0.3
+pkgver=0.0.4
 pkgrel=1
 
 pkgdesc="Listen to Fritz!BOX DDNS IP Updates and update Gandi DNS entries accordingly"
@@ -16,7 +16,7 @@ depends=('aspnet-targeting-pack')
 source=(https://github.com/blenderfreaky/FritzBoxGandiDDNS/archive/v$pkgver.tar.gz
         fritzbox-gandi-ddns.service)
 
-sha512sums=('8ec75b23832f72252b8d2276d3e47118b700859fa65f5ead44250d59b068cff2f7adddc79572bd7b98eb02d0783bb8d53e40e7db7268035eeebb7aab769a8e7d'
+sha512sums=('98be3b0e18c6ff0967998f3bf33f5b1bee125bb8794415220c9f6d4e4a866f8236a1fb92e0ee8b7d84de8d623c3e50211d108706255beafea4b942f554ed2922'
             '215282d8568bc258d442fa99c6c03683ce00066d01ab35ae1e1af82e481a312bb27823bf9e68375e0bef18861cc27a4ede89467bebdb4bdeca84cfde8f50d6e8')
 
 build() {
