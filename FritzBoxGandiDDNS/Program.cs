@@ -34,11 +34,13 @@ Task PutIPv6(string? address) => PutRecord("IPv6", "AAAA", address);
 
 async Task UpdateRecords()
 {
+    Console.WriteLine("Updating IP from server");
     await Task.WhenAll(PutIPv4(await http.GetStringAsync("https://ipv4.icanhazip.com/")), PutIPv6(await http.GetStringAsync("https://ipv6.icanhazip.com/")));
 }
 
 app.MapGet("/update", async (string? ipv4, string? ipv6) =>
 {
+    Console.WriteLine("Pinged by Fritz!BOX, updating IP");
     await Task.WhenAll(PutIPv4(ipv4), PutIPv6(ipv6));
 });
 
