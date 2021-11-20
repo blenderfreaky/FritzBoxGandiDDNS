@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/fritzbox-gandi-ddns
+ExecStart=/usr/bin/fritzbox-gandi-ddns/fritzbox-gandi-ddns
 Restart=always
 
 [Install]
