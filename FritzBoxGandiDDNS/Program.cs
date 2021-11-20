@@ -27,7 +27,7 @@ app.MapGet("/update", async (string? ipv4, string? ipv6) =>
                 $"https://dns.api.gandi.net/api/v5/domains/{domainName}/records/{recordName}/{type}",
                 new GandiAUpdateRequest(type, 300, address)))
             .Content.ReadAsStringAsync();
-        Console.WriteLine($"[{now}] Tried updating {name} {type} record {recordName}.{domainName} to {ipv4} (Response: \"{response}\")");
+        Console.WriteLine($"[{now}] Tried updating {name} {type} record {recordName}.{domainName} to {address} (Response: \"{response}\")");
     }
 
     if (ipv4 != null) await Put("IPv4", "A", ipv4);
