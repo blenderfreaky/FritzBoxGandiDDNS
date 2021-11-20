@@ -1,0 +1,11 @@
+﻿[Unit]
+Description=Fritz!BOX Gandi DDNS Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fritzbox-gandi-ddns
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
