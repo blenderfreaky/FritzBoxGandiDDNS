@@ -1,12 +1,13 @@
 pkgname=fritzbox-gandi-ddns
 pkgver=0.0.2
-pkgrel=1
+pkgrel=2
 
 pkgdesc="Listen to Fritz!BOX DDNS IP Updates and update Gandi DNS entries accordingly"
 url="https://github.com/blenderfreaky/FritzBoxGandiDDNS"
 source=("$pkgname-$pkgver.tar.gz::https://github.com/blenderfreaky/FritzBoxGandiDDNS/archive/v$pkgver.tar.gz")
 arch=('any')
 license=('MIT')
+options=('!strip')
 
 makedepends=('aspnet-runtime')
 depends=('aspnet-targeting-pack')
@@ -15,7 +16,7 @@ source=(https://github.com/blenderfreaky/FritzBoxGandiDDNS/archive/v$pkgver.tar.
         fritzbox-gandi-ddns.service)
 
 sha512sums=('45a1acec0cb3c24c8c4e311b39b2493719bc1bd73fd1bde5a42ae82d5f8f205e075137fae59c8c5ccbb89d2a7235a86b587beb50d8d87d9bdfc112d3df1acd6d'
-            'a210231258819eeef1ce53545a053a6d62841b18ed42fc9d945e23f3b54605d6631f5dc9c421c7f3f6485d17145e57abf206a5a143580e6494fd07be495e21dc')
+            '92a386cf3536b6396932b1d35e865168fdcbff6f9faf26df34e6a80dd95c8e1c598e32e28f3aed52b0ce60d176169149472cb765c51fd1c5151daa40339eb545')
 
 build() {
   cd "$srcdir/FritzBoxGandiDDNS-$pkgver/FritzBoxGandiDDNS"
