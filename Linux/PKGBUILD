@@ -1,6 +1,6 @@
 pkgname=fritzbox-gandi-ddns
-pkgver=0.0.2
-pkgrel=3
+pkgver=0.0.3
+pkgrel=1
 
 pkgdesc="Listen to Fritz!BOX DDNS IP Updates and update Gandi DNS entries accordingly"
 url="https://github.com/blenderfreaky/FritzBoxGandiDDNS"
@@ -17,7 +17,7 @@ source=(https://github.com/blenderfreaky/FritzBoxGandiDDNS/archive/v$pkgver.tar.
         fritzbox-gandi-ddns.service)
 
 sha512sums=('45a1acec0cb3c24c8c4e311b39b2493719bc1bd73fd1bde5a42ae82d5f8f205e075137fae59c8c5ccbb89d2a7235a86b587beb50d8d87d9bdfc112d3df1acd6d'
-            '92a386cf3536b6396932b1d35e865168fdcbff6f9faf26df34e6a80dd95c8e1c598e32e28f3aed52b0ce60d176169149472cb765c51fd1c5151daa40339eb545')
+            '65eeabc39acbdff1413805004e392241cd036d29bc9aae18c731091bc3645d17ddb8ca909c7c542cfa3240ca278441bd50b68941f010c58e09e99f483a6274ce')
 
 build() {
   cd "$srcdir/FritzBoxGandiDDNS-$pkgver/FritzBoxGandiDDNS"
